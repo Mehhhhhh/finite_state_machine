@@ -3,13 +3,13 @@
 #include "state.hpp"
 #include <iostream>
 
-class patrol : public state {
+class attack : public state {
 	public:
-		patrol();
+		attack();
 	protected:
 		void see_enemy(player* player) override;
                 void enemy_gone(player* player) override;
                 void no_ammo(player* player) override;
-                ~patrol() override;
+                ~attack();
 
 }

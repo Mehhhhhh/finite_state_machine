@@ -7,7 +7,16 @@
 
 class player{
 	public:
-		player(state& start_state);
+		player();
+		void setstate(state_t stateEnum);
+		void process();
+		void do_see_enemy();
+		void do_enemy_gone();
+		void do_no_ammo();
+		void ~player();
 	private:
 		state* current_state;
+		state* patrolstate;
+		state* attackstate;
+		state* runawaystate;
 }
